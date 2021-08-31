@@ -133,7 +133,7 @@ function App() {
       </div>
       <footer>
         <div className='footer'>
-          <span>Svara Mobile Player 2021</span>
+          <span>Svara Fast Player 2021&#169;</span>
         </div>
       </footer>
     </div>
