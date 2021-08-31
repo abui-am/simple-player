@@ -11,6 +11,17 @@
   display: block;
 }
 
+.full-height {
+  min-height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -51,4 +62,30 @@
 
 .share-button:hover {
   background-color: var(--primary-80);
+}
+
+.logo {
+  margin-right: 24px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background: white;
+}
+
+.header {
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  padding: 28px 24px;
+  max-width: 1280px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

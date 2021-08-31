@@ -3,8 +3,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary-text: rgba(0, 0, 0, 0.87);
+}
+
+.color[data-theme='svara'] {
   --primary: rgb(34, 91, 118);
   --primary-80: rgb(34, 91, 150);
+}
+
+.color[data-theme='crayonpedia'] {
+  --primary: #f9ae1f;
+  --primary-80: #d38d0b;
+}
+
+.color[data-theme='officely'] {
+  --primary: #00b0f0;
+  --primary-80: rgb(23, 73, 126);
 }
 
 * {
@@ -20,7 +33,10 @@ div {
   box-sizing: border-box;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4 {
   display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
