@@ -6,8 +6,8 @@ body {
 }
 
 .color[data-theme='svara'] {
-  --primary: rgb(34, 91, 118);
-  --primary-80: rgb(34, 91, 150);
+  --primary: #2fb5f6;
+  --primary-80: #17a6ce;
 }
 
 .color[data-theme='crayonpedia'] {
