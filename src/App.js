@@ -12,11 +12,31 @@ function useQuery() {
 function App() {
   const query = useQuery();
   const url = query.get('url');
-  const logo = query.get('logo');
-  const title = query.get('title');
+  const logo = query.get('logo') ?? '/images/cover.jpg';
+  const title = query.get('title') ?? 'Livestream';
   const appName = process.env.REACT_APP_APPNAME;
 
   const { webplay, playstore, logo: logoApp } = LINK[appName] ?? {};
+
+  if (!url) {
+    return (
+      <div className='wrapper'>
+        <div className='container flex-center full-height'>
+          <h1
+            style={{
+              marginBottom: 16,
+              fontSize: 120,
+              color: '#dedede',
+            }}
+          >
+            Oopss...
+          </h1>
+          <h3 style={{ marginBottom: 16 }}>Missing URL param</h3>
+          <span>Please provide url value in query parameter</span>
+        </div>
+      </div>
+    );
+  }
 
   if (!LINK[appName])
     return (
