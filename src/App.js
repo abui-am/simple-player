@@ -1,6 +1,6 @@
 import './App.css';
 import ReactPlayer from 'react-player/file';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import LINK from './constants/LINK';
 
 // A custom hook that builds on useLocation to parse
