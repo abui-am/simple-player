@@ -69,6 +69,7 @@
   border: 1px solid #e2e2e2;
   border-radius: 8px;
   background: white;
+  object-fit: cover;
 }
 
 .header {
