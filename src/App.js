@@ -14,12 +14,11 @@ function App() {
   const url = query.get('url');
   const logo = query.get('logo');
   const title = query.get('title');
+  const appName = process.env.REACT_APP_APPNAME;
 
-  const { id } = useParams();
+  const { webplay, playstore, logo: logoApp } = LINK[appName] ?? {};
 
-  const { webplay, playstore, logo: logoApp } = LINK[id] ?? {};
-
-  if (!LINK[id])
+  if (!LINK[appName])
     return (
       <div className='wrapper'>
         <div className='container flex-center full-height'>
@@ -32,14 +31,16 @@ function App() {
           >
             404
           </h1>
-          <h3 style={{ marginBottom: 16 }}>Page not found for id {id}</h3>
+          <h3 style={{ marginBottom: 16 }}>
+            Cannot found theme for: {appName}
+          </h3>
           <spa>Try something else.</spa>
         </div>
       </div>
     );
 
   return (
-    <div data-theme={id} className='color'>
+    <div data-theme={appName} className='color'>
       <div className='App'>
         <section
           style={{
@@ -133,7 +134,7 @@ function App() {
       </div>
       <footer>
         <div className='footer'>
-          <span>Svara Fast Player 2021&#169;</span>
+          <span>{appName.toUpperCase()} Fast Player 2021&#169;</span>
         </div>
       </footer>
     </div>
